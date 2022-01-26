@@ -46,8 +46,8 @@ class HomeView extends GetView<HomeController> {
                                                 controller.listTodos[count];
                                           },
                                           child: Row(
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.center,
+                                            mainAxisAlignment:
+                                                MainAxisAlignment.start,
                                             children: [
                                               Text(listTodos.id.toString()),
                                               SizedBox(
@@ -55,15 +55,36 @@ class HomeView extends GetView<HomeController> {
                                               ),
                                               Expanded(
                                                 child: Column(
-                                                  mainAxisAlignment:
-                                                      MainAxisAlignment.center,
                                                   crossAxisAlignment:
                                                       CrossAxisAlignment.start,
                                                   children: [
-                                                    Text("Title"),
-                                                    AutoSizeText(
-                                                      listTodos.title,
-                                                      maxLines: 2,
+                                                    Column(
+                                                      mainAxisAlignment:
+                                                          MainAxisAlignment
+                                                              .center,
+                                                      crossAxisAlignment:
+                                                          CrossAxisAlignment
+                                                              .start,
+                                                      children: [
+                                                        Text("Title"),
+                                                        AutoSizeText(
+                                                          listTodos.title,
+                                                          maxLines: 2,
+                                                        ),
+                                                      ],
+                                                    ),
+                                                    Column(
+                                                      mainAxisAlignment:
+                                                          MainAxisAlignment
+                                                              .center,
+                                                      crossAxisAlignment:
+                                                          CrossAxisAlignment
+                                                              .start,
+                                                      children: [
+                                                        Text("Completed"),
+                                                        Text(listTodos.completed
+                                                            .toString())
+                                                      ],
                                                     ),
                                                   ],
                                                 ),
