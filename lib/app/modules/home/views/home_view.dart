@@ -46,9 +46,17 @@ class HomeView extends GetView<HomeController> {
                                                 controller.listTodos[count];
                                           },
                                           child: Row(
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.center,
                                             children: [
+                                              Text(listTodos.id.toString()),
+                                              SizedBox(
+                                                width: 5.w,
+                                              ),
                                               Expanded(
                                                 child: Column(
+                                                  mainAxisAlignment:
+                                                      MainAxisAlignment.center,
                                                   crossAxisAlignment:
                                                       CrossAxisAlignment.start,
                                                   children: [
